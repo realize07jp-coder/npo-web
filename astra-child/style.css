@@ -9,3 +9,21 @@
 */
 
 /* 追加のカスタムCSSはここに記述してください */
+
+/* ------------------------------------------------------------
+ * フォームのセレクトボックス（寄付金額など）の文字見切れ対策
+ * iOS Safari で高さ固定＋上下パディング＋行高の組み合わせにより
+ * 「—以下から選択してください—」の下側が切れていたため、
+ * 高さを内容に合わせて自動算出させる。
+ * ------------------------------------------------------------ */
+.wpcf7 select,
+.entry-content form select {
+	height: auto;
+	min-height: 3em;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+	line-height: 1.5;
+	box-sizing: border-box;
+	max-width: 100%;
+	text-overflow: ellipsis;
+}
